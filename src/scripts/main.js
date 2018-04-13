@@ -1,4 +1,6 @@
-Trivia.getQuestions({ 'amount': 10 })
+// Check for token first
+
+Trivia.getSessionQuestions({ 'amount': 10 })
     .then(Trivia.clearForm)
     .then(Trivia.transform)
     .then(Trivia.decodeText)
