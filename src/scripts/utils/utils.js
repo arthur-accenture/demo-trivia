@@ -1,10 +1,9 @@
 var Trivia = (() => {
-    const URL = 'https://opentdb.com/api_token.php';
+    const URL = 'https://opentdb.com/api.php';
     let token = '';
     return {
         "getQuestions": (options) => {
             if (token) {
-                // If we have a token, use it
                 options.token = token;
             }
             return $.ajax(URL, {
@@ -47,7 +46,7 @@ var Trivia = (() => {
                     }
                     // Generate random index to push correct answer into
                 if (output.type === 'multiple') {
-                    let index = Math.floor(Math.random() * (i + 1));
+                    let index = Math.floor(Math.random() * (question.incorrect + 1));
                     output.answers.splice(index, 0, question.correct_answer);
                 } else if (output.type === 'boolean') {
                     output.answers = ['True', 'False'];
