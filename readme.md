@@ -1,7 +1,7 @@
 # Test trivia page
 
 ## About
-This is a mini project to test interactive web content.
+A project to demonstrate how to use AJAX calls to pull back data from Open Trivia DB to create a trivia game.
 
 ## Installation
 1. If gulp hasn't been installed globally, run: `npm install -g gulp` first.
